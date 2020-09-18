@@ -2,10 +2,11 @@ applications:
 - name: tracker-registration
   path: ./applications/registration-server/build/libs/registration-server.jar
   routes:
-  - route: registration-pal-${UNIQUE_IDENTIFIER}.${DOMAIN}
+  - route: registration-pal-pal-tracker-5391c1e9-90d1-48a8-a822-ef9c2ebedb99.apps.evans.pal.pivotal.io.apps.evans.pal.pivotal.io
   memory: 1G
   instances: 1
   env:
+    EGISTRATION_SERVER_ENDPOINT: http://registration-pal-pal-tracker-5391c1e9-90d1-48a8-a822-ef9c2ebedb99.apps.evans.pal.pivotal.io.apps.evans.pal.pivotal.io
     JBP_CONFIG_OPEN_JDK_JRE: '{ jre: { version: 11.+ } }'
   services:
   - tracker-registration-database
